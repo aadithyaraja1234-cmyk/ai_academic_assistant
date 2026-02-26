@@ -3,9 +3,10 @@ from dotenv import load_dotenv
 from litellm import completion
 from prompt_layer import SYSTEM_PROMPT
 
-load_dotenv()
+import streamlit as st
 
-MODEL_NAME = os.getenv("MODEL_NAME", "groq/llama-3.1-8b-instant")
+MODEL_NAME = st.secrets["MODEL_NAME"]
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 
 def call_llm(prompt):
     response = completion(
@@ -17,5 +18,6 @@ def call_llm(prompt):
         temperature=0.4,
         max_tokens=700
     )
+
 
     return response["choices"][0]["message"]["content"]
