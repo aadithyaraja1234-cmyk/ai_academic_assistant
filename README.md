@@ -33,6 +33,7 @@ Input → Prompt Layer → LLM Layer → Post Processing → UI
 
 ### 📂 Project Structure
 ai_academic_assistant/
+
 │
 ├── module3/
 
