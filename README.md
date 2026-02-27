@@ -33,21 +33,19 @@ Input → Prompt Layer → LLM Layer → Post Processing → UI
 
 ### 📂 Project Structure
 ai_academic_assistant/
-
 │
-├── module3/
-|
-│ ├── streamlit_app.py # Streamlit user interface
-|
-│ ├── pipeline.py # Orchestrates full flow
-|
-│ ├── prompt_layer.py # Prompt engineering logic
-|
-│ ├── llm_layer.py # Groq + LiteLLM integration
-|
-│ ├── post_processing.py # Output cleaning
-|
-│ └── requirements.txt
+├── module3/ # Core application module
+│ │
+│ ├── streamlit_app.py # Streamlit web interface (UI layer)
+│ ├── pipeline.py # Application orchestration logic
+│ ├── prompt_layer.py # Prompt engineering & system instructions
+│ ├── llm_layer.py # Groq + LiteLLM integration layer
+│ ├── post_processing.py # Output formatting & cleaning
+│ └── requirements.txt # Python dependencies
+│
+├── .env # Local environment variables (excluded from Git)
+├── .gitignore # Git ignore configuration
+└── README.md # Project documentation
 
 ---
 
