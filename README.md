@@ -31,8 +31,9 @@ The application follows a clean layered pipeline:
 
 Input → Prompt Layer → LLM Layer → Post Processing → UI
 
-### 📂 Project Structure
+## 📂 Project Structure
 
+```
 ai_academic_assistant/
 │
 ├── module3/                          # Core application module
@@ -47,8 +48,7 @@ ai_academic_assistant/
 ├── .env                              # Local environment variables (excluded from Git)
 ├── .gitignore                        # Git ignore configuration
 └── README.md                         # Project documentation
-
----
+```
 
 ## ⚙️ Tech Stack
 
