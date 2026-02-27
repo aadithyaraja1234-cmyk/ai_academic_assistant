@@ -35,11 +35,17 @@ Input → Prompt Layer → LLM Layer → Post Processing → UI
 ai_academic_assistant/
 │
 ├── module3/
+
 │ ├── streamlit_app.py # Streamlit user interface
+
 │ ├── pipeline.py # Orchestrates full flow
+
 │ ├── prompt_layer.py # Prompt engineering logic
+
 │ ├── llm_layer.py # Groq + LiteLLM integration
+
 │ ├── post_processing.py # Output cleaning
+
 │ └── requirements.txt
 
 ---
