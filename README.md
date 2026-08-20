@@ -202,6 +202,12 @@ Results are written to `eval/results.json` (raw) and `eval/REPORT.md` (summary t
 
 ---
 
+## ✅ Launch Checklist
+
+[LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md) walks through the standard site-readiness checklist (meta tags, mobile, forms, privacy, SEO, etc.) item by item against this app, including what's genuinely done, what doesn't apply to a single-page tool, and what's blocked by Streamlit Community Cloud's hosting model (no custom `<head>`, no static file root).
+
+---
+
 ## 📈 Future Improvements
 
 - Chat-style conversational interface with memory

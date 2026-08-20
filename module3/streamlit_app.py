@@ -67,3 +67,17 @@ if st.button("Generate Answer"):
                     file_name="academic_answer.pdf",
                     mime="application/pdf",
                 )
+
+st.markdown("---")
+with st.expander("Privacy & data handling"):
+    st.markdown(
+        "Your question is sent to Groq's LLM API to generate a response and "
+        "is not stored by this app or logged anywhere. No accounts, cookies, "
+        "or personal data are collected. See Groq's own "
+        "[privacy policy](https://groq.com/privacy-policy/) for how they "
+        "handle API requests."
+    )
+st.caption(
+    "Built by Aadithya Raja Anil · "
+    "[Source on GitHub](https://github.com/aadithyaraja1234-cmyk/ai_academic_assistant)"
+)
