@@ -1,0 +1,32 @@
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["module3", "eval", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["module3"]
+
+[tool.mypy]
+# NOTE: this only controls which typing-syntax features mypy's parser
+# accepts (needed because a transitive dependency's bundled stub file
+# uses 3.12+ syntax) - the app itself still targets Python 3.10+ per
+# module3/requirements.txt; mypy doesn't affect the runtime requirement.
+python_version = "3.12"
+mypy_path = "module3"
+explicit_package_bases = true
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["module3"]
+omit = ["module3/streamlit_app.py"]

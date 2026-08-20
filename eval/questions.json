@@ -1,0 +1,17 @@
+[
+  {"id": "q01", "subject": "physics", "difficulty": "easy", "question": "What is Newton's second law of motion?"},
+  {"id": "q02", "subject": "physics", "difficulty": "medium", "question": "Why does a satellite in orbit not fall to Earth?"},
+  {"id": "q03", "subject": "biology", "difficulty": "easy", "question": "What is the difference between mitosis and meiosis?"},
+  {"id": "q04", "subject": "biology", "difficulty": "medium", "question": "How does natural selection lead to evolution over time?"},
+  {"id": "q05", "subject": "chemistry", "difficulty": "easy", "question": "What is the difference between an ionic bond and a covalent bond?"},
+  {"id": "q06", "subject": "chemistry", "difficulty": "medium", "question": "Why does increasing temperature generally speed up a chemical reaction?"},
+  {"id": "q07", "subject": "mathematics", "difficulty": "easy", "question": "What is the Pythagorean theorem and when is it used?"},
+  {"id": "q08", "subject": "mathematics", "difficulty": "medium", "question": "What is the difference between a derivative and an integral in calculus?"},
+  {"id": "q09", "subject": "computer_science", "difficulty": "easy", "question": "What is the difference between a stack and a queue?"},
+  {"id": "q10", "subject": "computer_science", "difficulty": "medium", "question": "Why is binary search faster than linear search, and what does it require?"},
+  {"id": "q11", "subject": "economics", "difficulty": "easy", "question": "What is the law of supply and demand?"},
+  {"id": "q12", "subject": "economics", "difficulty": "medium", "question": "What causes inflation in an economy?"},
+  {"id": "q13", "subject": "history", "difficulty": "easy", "question": "What were the main causes of World War I?"},
+  {"id": "q14", "subject": "statistics", "difficulty": "medium", "question": "What is the difference between correlation and causation?"},
+  {"id": "q15", "subject": "statistics", "difficulty": "hard", "question": "What is a p-value and why is it commonly misinterpreted?"}
+]
