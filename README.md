@@ -10,7 +10,7 @@ AI Academic Assistant is a structured answer generator built with **Streamlit**,
 
 ## 🚀 Live Demo
 
-[Live Application](https://aiacademicassistant-sw2q7zdsxlnkxlsfk4qnpc.streamlit.app/)
+[Live Application](https://aiacademicassistant-sw2q7zdsxlnkxlsfk4qnpc.streamlit.app/) (Streamlit Community Cloud) · [Hugging Face Space](https://huggingface.co/spaces/aadithya1234/ai-academic-assistant) (landing page with proper link-preview/OG metadata)
 
 ---
 
