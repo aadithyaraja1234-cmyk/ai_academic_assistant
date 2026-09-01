@@ -30,3 +30,19 @@ def test_build_pdf_with_unstructured_fallback_answer_does_not_crash():
     pdf_bytes = build_pdf("What is gravity?", answer)
 
     assert pdf_bytes.startswith(b"%PDF")
+
+
+def test_build_pdf_with_characters_outside_the_core_font_range():
+    # Regression test: fpdf2's core "Helvetica" font only supports
+    # WinAnsi/CP1252 and raises FPDFUnicodeEncodingException on anything
+    # outside it - hit in production when an LLM answer contained "∑".
+    # See module3/pdf_export.py's DejaVu Sans font registration.
+    answer = StructuredAnswer(
+        explanation="Operates on patterns → not understanding — no consciousness.",
+        example="π ≈ 3.14, and ∑ xᵢ ≥ 0 at 25°C.",
+        key_insights=["Trained on diverse data → broad coverage αβγ"],
+    )
+
+    pdf_bytes = build_pdf("What is an AI language model?", answer)
+
+    assert pdf_bytes.startswith(b"%PDF")
