@@ -7,6 +7,15 @@ def test_system_prompt_has_no_stray_leading_quote():
     assert not SYSTEM_PROMPT.strip().startswith('"')
 
 
+def test_system_prompt_corrects_model_identity():
+    # Regression test: a live response identified itself as "ChatGPT" -
+    # it's actually openai/gpt-oss-20b served via Groq, not the ChatGPT
+    # product, and this is a known failure mode for open-weight models
+    # trained on data containing ChatGPT transcripts.
+    assert "not ChatGPT" in SYSTEM_PROMPT
+    assert "AI Academic Assistant" in SYSTEM_PROMPT
+
+
 def test_build_prompt_includes_the_question():
     prompt = build_prompt("What is gravity?")
     assert "What is gravity?" in prompt

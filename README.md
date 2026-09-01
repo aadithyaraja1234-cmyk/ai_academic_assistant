@@ -17,7 +17,7 @@ AI Academic Assistant is a structured answer generator built with **Streamlit**,
 ## 🧠 Features
 
 - Schema-constrained, structured answers (explanation, example, key insights), validated with Pydantic
-- Robust JSON parsing that survives markdown fences / stray prose around the payload, with a graceful unstructured fallback instead of crashing
+- Robust JSON parsing that survives markdown fences, stray prose, and malformed JSON (unescaped quotes, missing brackets) via a three-tier strict-parse → repair → unstructured-fallback strategy, instead of crashing
 - Retry with backoff on transient LLM API failures
 - Per-response latency and token-usage tracking, surfaced in the UI
 - PDF export of any answer
@@ -79,6 +79,7 @@ ai_academic_assistant/
 - Groq API
 - Pydantic
 - fpdf2
+- json-repair
 - pytest, pytest-cov
 - ruff, mypy
 - GitHub Actions (CI)
